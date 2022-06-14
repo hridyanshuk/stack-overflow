@@ -1,7 +1,9 @@
 function Logo() {
     return (
         <div className="header_logo">
-            Stack Overflow
+            {/* <span> */}
+                stack <b>overflow</b>
+            {/* </span> */}
         </div>
     )
 }

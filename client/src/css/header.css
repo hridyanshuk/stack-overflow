@@ -1,16 +1,16 @@
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     /* background-color: rgb(146, 233, 230); */
     background: rgb(235, 235, 235);
-    /* height: 60px; */
-    padding: 10px 0px;
+    height: 70px;
+    padding: 10px 20px;
     /* padding-bottom: 30px; */
 }
 
 .header_searchSection {
-    width: 60%;
+    width: 100%;
     display: flex;
 }
 
@@ -72,6 +72,3 @@
     border-left: solid 1px lightgrey;
 }
 
-.header_logo {
-    margin-left: 20px;
-}

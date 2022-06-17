@@ -1,7 +1,15 @@
 .sidebar_left {
     flex:0.25;
+    width: 25%;
     background: rgb(235, 235, 235);
     /* margin-bottom: 0%; */
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+    /* position: fixed; */
+    /* min-height: fit-content; */
 }
 
 .sidebar_left ul {
@@ -59,3 +67,7 @@
     height: 40px;
 }
 
+.sidebar_left_content {
+    /* border-right: solid 1px grey; */
+    height: 100%;
+}

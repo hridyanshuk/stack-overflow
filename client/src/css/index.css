@@ -5,20 +5,33 @@
 
 body {
     margin: 0;
-    height: 100vh;
+    /* height: 100vh; */
+    /* background: rgb(235, 235, 235); */
+
 }
 
 #root {
-    height: 100%;
+    /* height: 100%; */
 }
 
 .app {
     display: flex;
-    height: 100%;
+    height: 100vh;
+    min-height: min-content;
     /* width: 100vw; */
     /* justify-content: space-between; */
 }
 
 .main {
-    flex: 0.5;
+    flex: 0.75;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    /* overflow-y: auto; */
+    /* height: calc(100% - 70px); */
+}
+
+.main_content {
+    overflow-y: auto;
 }

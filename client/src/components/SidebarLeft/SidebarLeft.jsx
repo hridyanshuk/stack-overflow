@@ -11,7 +11,7 @@ function SideBarLeft() {
         {
             name:"Home",
             class:"closed",
-            link:'home',
+            link:'',
             key: 0
         }, {
             name:"Questions",
@@ -34,7 +34,7 @@ function SideBarLeft() {
     useEffect(() => {
         var links = nav;
         links.map( (link) => {
-            if("/main/" + link.link === location.pathname) {
+            if("/" + link.link === location.pathname) {
                 link.class = "open"
                 setCurrentNav(link.key)
             }

@@ -3,7 +3,12 @@ import './home.css'
 function Home() {
     return (
         <div className="home">
-            <div className="homestart"></div>
+
+            <div className="content_header">
+                <h1 className="content_heading">Top Questions</h1>
+                <button className="content_button">Post question</button>
+            </div>
+
             <div className="homediv">
                 <QuestionCard question={{
                     user: 'User name',
@@ -103,7 +108,6 @@ function Home() {
                 }} />
                 
             </div>
-            <div className="homeend"></div>
         </div>
     )
 }

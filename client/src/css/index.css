@@ -35,3 +35,32 @@ body {
 .main_content {
     overflow-y: auto;
 }
+
+.content_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    margin: 0px 20px;
+}
+
+.content_button {
+    background: rgb(10,149,255);
+    padding: 12px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    width: 115px;
+    outline: none;
+}
+
+.content_button:hover {
+    cursor: pointer;
+}
+
+.content_button:active {
+    /* background-color: white; */
+    /* color: rgb(10, 149, 255) */
+    border: solid black 1px;
+}

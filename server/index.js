@@ -51,8 +51,18 @@ app.get('/question/totalcount', async (req, res) => {
 })
 
 app.get('/question/list', (req, res) => {
-    const filter = req.body
-    const List = Question.find(filter, (err, data) => {
+    var filter = {}
+    if(req.query.tag==='true') {
+        
+        filter = {
+            "tags": {
+                "$all": req.query.tags
+            }
+        }
+    }
+    console.log(req.query)
+    // console.log(req)
+    Question.find(filter, (err, data) => {
         if(err) {
             res.status(500).send(err)
         }

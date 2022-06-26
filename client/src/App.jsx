@@ -55,7 +55,7 @@ function App() {
                 <div className="main_content">
                 <Routes>
                     <Route path='/' element={<Home questions={questions}/>} />
-                    <Route path='/questions' element={<Questions questions={questions} />} />
+                    <Route path='/questions' element={<Questions questions={questions} setQues={setQuestions} />} />
                     <Route path='/tags' element={<Tags />} />
                     <Route path='/users' element={<Users />} />
                     <Route path = '/ask' element = {<PostQuestion />} />

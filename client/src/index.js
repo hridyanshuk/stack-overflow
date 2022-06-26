@@ -7,6 +7,9 @@ import './css/sidebarleft.css'
 import './css/sidebarright.css'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import PostQuestion from './Routes/PostQuestion/PostQuestion'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

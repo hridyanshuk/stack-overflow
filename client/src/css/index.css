@@ -32,6 +32,11 @@ body {
     /* height: calc(100% - 70px); */
 }
 
+.home {
+    /* flex: 0.5; */
+    min-width: 66%;
+}
+
 .main_content {
     overflow-y: auto;
 }
@@ -51,8 +56,11 @@ body {
     border-radius: 5px;
     color: white;
     font-size: 15px;
-    width: 115px;
+    min-width: 115px;
+    width: max-content;
+    text-decoration: none;
     outline: none;
+    border: 1px solid transparent;
 }
 
 .content_button:hover {

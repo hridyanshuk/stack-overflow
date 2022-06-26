@@ -8,7 +8,7 @@ import Home from './Routes/Home/Home'
 import Questions from './Routes/Questions/Questions'
 import Tags from './Routes/Tags/Tags'
 import Users from './Routes/Users/Users'
-
+import PostQuestion from "./Routes/PostQuestion/PostQuestion.jsx";
 
 
 
@@ -52,6 +52,7 @@ function App() {
                 <Route path='/questions' element={<Questions />} />
                 <Route path='/tags' element={<Tags />} />
                 <Route path='/users' element={<Users />} />
+                <Route path = '/ask' element = {<PostQuestion />} />
               </Routes>
             </div>
           </div>

@@ -13,7 +13,7 @@ export default ({ question }) =>
             {/* <div className="question_card_left"></div> */}
             <QuestionStats votes = {question.votes} answers = {question.answers}/>
             <div className="question_card_right">
-                <Question question = {question.question}/>
+                <Question question = {question.title}/>
                 <QuestionTags tags = {question.tags}/>
                 <div className="question_card_bottom">
                     <QuestionInfo user = {question.user} timeStamp = {question.timeStamp}/>

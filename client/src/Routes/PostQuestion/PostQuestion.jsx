@@ -15,19 +15,26 @@ export default () => {
     //     })
     // }, [])
 
-    const postQuestion = () => {
+    const postQuestion = async () => {
         const titleElement = titleRef.current
         const questionElement = questionRef.current
         const tagElement = tagsRef.current
         var tags = tagElement.value.split(' ')
+        
+        const response = await axios.get('/question/totalcount')
+        const count = Number(response.data)+1
+        const time = new Date().toDateString()
+        console.log(time)
+        // console.log(typeof(time))
         const question = {
             user: "Hridyanshu",
             title: titleElement.value,
             question: questionElement.value,
-            timestamp: String(Date()),
+            timeStamp: time,
             votes: 0,
             answers: 0,
-            tags: tags
+            tags: tags,
+            count: count
         }
         // console.log(tags)
         axios.post('/question/post', question)

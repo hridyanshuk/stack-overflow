@@ -34,9 +34,12 @@ body {
 
 .home {
     /* flex: 0.5; */
+    /* width: 66%; */
+    width: fit-content;
+}
+.main_questions {
     min-width: 66%;
 }
-
 .main_content {
     overflow-y: auto;
 }

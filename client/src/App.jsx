@@ -1,7 +1,8 @@
 import Header from "./components/Header/Header.jsx"
 import SideBarLeft from "./components/SidebarLeft/SidebarLeft.jsx";
 // import SideBarRight from "./components/SidebarRight/SidebarRight.jsx"
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from './axios'
 // import { GetDerivedStateFromError, componentDidCatch, logErrorToMyService } from "react";
 
 import Home from './Routes/Home/Home'
@@ -41,21 +42,26 @@ import { Route, Routes } from 'react-router-dom'
 
 
 function App() {
-  return (
+    const [questions, setQuestions] = useState([])
+    useEffect(() => {
+        axios.get('/question/list').then(response => setQuestions(response.data))
+    }, [])
+
+    return (
         <div className="app">
             <SideBarLeft />
             <div className="main">
-              <Header />
-              <div className="main_content">
-              <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/questions' element={<Questions />} />
-                <Route path='/tags' element={<Tags />} />
-                <Route path='/users' element={<Users />} />
-                <Route path = '/ask' element = {<PostQuestion />} />
-              </Routes>
+                <Header />
+                <div className="main_content">
+                <Routes>
+                    <Route path='/' element={<Home questions={questions}/>} />
+                    <Route path='/questions' element={<Questions questions={questions} />} />
+                    <Route path='/tags' element={<Tags />} />
+                    <Route path='/users' element={<Users />} />
+                    <Route path = '/ask' element = {<PostQuestion />} />
+                    </Routes>
+                </div>
             </div>
-          </div>
         </div>
     )
 }

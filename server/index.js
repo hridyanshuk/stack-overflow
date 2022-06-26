@@ -47,7 +47,19 @@ app.post('/question/post', (req, res) => {
 
 app.get('/question/totalcount', async (req, res) => {
     const count = await Question.countDocuments()
-    res.status(200).send(count)
+    res.status(200).send(String(count))
+})
+
+app.get('/question/list', (req, res) => {
+    const filter = req.body
+    const List = Question.find(filter, (err, data) => {
+        if(err) {
+            res.status(500).send(err)
+        }
+        else {
+            res.status(200).send(data)
+        }
+    })
 })
 
 // app.post('/question/post/tags', (req, res) => {

@@ -7,7 +7,8 @@
     padding: 10px 5px;
     margin: 10px;
     /* margin-bottom: 0px; */
-    width: fit-content;
+    width: 700px;
+    /* min-width: ; */
     max-height: 125px;
     overflow: hidden;
 }
@@ -108,13 +109,17 @@
     font-family: sans-serif;
     font-weight: bold;
 }
+.question_card_timeStamp {
+    padding-left: 10px;
+}
 
 .question_card_question {
     max-height: 50px;
     overflow: hidden;
     /* overflow-wrap: break-word; */
     /* word-break: break-word; */
-    max-width: 590px;
+    max-width: 550px;
+    /* max-width: 100%; */
     font-weight: bold;
     white-space: nowrap;
     text-overflow: ellipsis;

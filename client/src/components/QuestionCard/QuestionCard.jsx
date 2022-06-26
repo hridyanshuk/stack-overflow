@@ -7,8 +7,9 @@ import QuestionTags from './QuestionTags'
 
 import { Link } from 'react-router-dom'
 
-export default ({ question }) => 
-    // <Link to = "">
+export default ({ question }) => {
+    // console.log(question)
+    return (
         <div className="question_card">
             {/* <div className="question_card_left"></div> */}
             <QuestionStats votes = {question.votes} answers = {question.answers}/>
@@ -20,4 +21,5 @@ export default ({ question }) =>
                 </div>
             </div>
         </div>
-    // </Link>
+    )
+}

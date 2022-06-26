@@ -44,7 +44,7 @@ function SideBarLeft() {
             return link
         })
         setNav(links)
-        console.log(nav)
+        // console.log(nav)
     }, [nav, location.pathname])
     
     function highlight(index) {
@@ -59,7 +59,7 @@ function SideBarLeft() {
         <div className="sidebar_left">
             <Logo />
             <div className="sidebar_left_content">
-                {console.log("Done")}
+                {/* {console.log("Done")} */}
                 <div className="sidebar_left_sized" />
                 <ul>
                     {nav.map((link) => {

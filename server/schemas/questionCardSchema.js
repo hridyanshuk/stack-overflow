@@ -7,7 +7,8 @@ const questionCardSchema = mongoose.Schema({
     timeStamp: String,
     votes: Number,
     answers: Number,
-    tags: [{ type: String }]
+    tags: [{ type: String }],
+    count: Number
 })
 
 export default mongoose.model("questions", questionCardSchema)
